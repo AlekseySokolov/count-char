@@ -1,6 +1,7 @@
 ## count-char
 
 Ведет подсчет символов в HTML - документе по переданной ссылке <br />
+<br />
 Проект был выполнен на React.js с помощью инструментов:<br />
 -[Create React App](https://github.com/facebook/create-react-app)<br />
 -Управление состоянием [Redux](https://github.com/reduxjs/redux)<br/>
