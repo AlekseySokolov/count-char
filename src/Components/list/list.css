@@ -1,0 +1,14 @@
+.charactersList {
+    width: 1300px;
+    height: 1700px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: stretch;
+    list-style: square;
+}
+.charactersList > li {
+    margin: 5px;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 14px;
+}
