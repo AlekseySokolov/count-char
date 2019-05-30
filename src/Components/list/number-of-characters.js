@@ -5,7 +5,8 @@ const numberOfCharacters = (html) => {
     allCharactersInAnArray.forEach(i => {
         myMap.has(i) ? myMap.get(i).quantity += 1: myMap.set(i, {quantity : 1})
     });
-    Array.from(myMap).forEach(i => myObj[i[0]] = i[1].quantity);
+    console.log(myMap);
+    myMap.forEach((value, key) => myObj[key] = value.quantity);
     const sortedСharactersInTheArray = [...Object.entries(myObj)].sort();
     return sortedСharactersInTheArray;
 }
