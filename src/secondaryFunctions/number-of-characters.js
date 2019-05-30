@@ -1,14 +1,12 @@
 const numberOfCharacters = (html) => {
     const myMap = new Map();
-    const myObj = {};
+    const coll = [];
     const allCharactersInAnArray = html.split('');
     allCharactersInAnArray.forEach(i => {
         myMap.has(i) ? myMap.get(i).quantity += 1: myMap.set(i, {quantity : 1})
     });
-    console.log(myMap);
-    myMap.forEach((value, key) => myObj[key] = value.quantity);
-    const sortedСharactersInTheArray = [...Object.entries(myObj)].sort();
-    return sortedСharactersInTheArray;
+    myMap.forEach((value, key) => coll.push(new Map().set(key, value.quantity)));
+    return coll;
 }
 
 export default numberOfCharacters;

@@ -1,6 +1,4 @@
-const filterHTML = (string) => {
-    return string.replace(/<script[^>]*?>[\s\S]*?<\/script>/g,'').replace(/(\<(\/?[^>]+)>)/g,'')
-}
+import filterHTML from '../secondaryFunctions/filterHTML';
 
 const dataReducer = (state = '', action) => {
     switch (action.type) {

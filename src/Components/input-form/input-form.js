@@ -5,9 +5,9 @@ import axiosRequest from './axiosRequest';
 import  * as actions from '../../actions/actions';
 
 const InputForm = (props) => {
-    const { handleSubmit , getRequest } = props
+    const { handleSubmit , getRequest, getList} = props
     const submit = (value) => {
-        axiosRequest(value['inputURL'], getRequest)
+        axiosRequest(value['inputURL'], getRequest, getList)
     }
     return (
         <form onSubmit={handleSubmit(submit)}>
@@ -24,7 +24,8 @@ const InputForm = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        html : state.html
+        html : state.html,
+        list : state.list
     }
 }
 

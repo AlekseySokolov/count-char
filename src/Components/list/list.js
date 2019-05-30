@@ -1,24 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/actions';
-import numberOfCharacters from './number-of-characters';
+import buttons from './buttons';
+import renderList from './renderList';
 import './list.css'
 
-const List = ({html}) => {
+const List = ({list, html, getList, asc, desc}) => {
     return (
         <div>
-            <ul className='charactersList'>
-                {numberOfCharacters(html)
-                 .map((value, index)=>
-                     <li key={index}>{value[0]} = {value[1]}</li>)}
-            </ul>
+            {buttons(getList, asc, desc, html, list)}
+            {renderList(list)}
         </div>
     )
 }
 
 const mapStateToProps = (state) => {
     return {
-        html : state.html
+        html : state.html,
+        list : state.list
     }
 }
 export default connect(mapStateToProps, actions)(List)
