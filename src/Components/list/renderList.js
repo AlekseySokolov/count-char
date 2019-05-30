@@ -4,8 +4,8 @@ const renderList = (list) => {
     return (
         <ul className='charactersList'>
             {list
-                .map((value, index)=>
-                    <li key={index}>{value.keys().next().value} = {value.values().next().value}</li>)}
+                .map((obj, index)=>
+                    <li key={index}>{Object.keys(obj)} = {Object.values(obj)}</li>)}
         </ul>
     )
 }

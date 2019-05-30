@@ -5,7 +5,7 @@ const numberOfCharacters = (html) => {
     allCharactersInAnArray.forEach(i => {
         myMap.has(i) ? myMap.get(i).quantity += 1: myMap.set(i, {quantity : 1})
     });
-    myMap.forEach((value, key) => coll.push(new Map().set(key, value.quantity)));
+    myMap.forEach((value, key) => coll.push({ [key] : value.quantity }));
     return coll;
 }
 
