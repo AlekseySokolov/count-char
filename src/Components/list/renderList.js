@@ -1,13 +1,12 @@
 import React from 'react';
 
-const renderList = (list) => {
+const RenderList = (props) => {
+    const {list, displayFunction} = props
     return (
-        <ul className='charactersList'>
-            {list
-                .map((obj, index)=>
-                    <li key={index}>{Object.keys(obj)} = {Object.values(obj)}</li>)}
+        <ul className='list'>
+            { list.map((obj, index)=> displayFunction(obj, index)) }
         </ul>
     )
 }
 
-export default renderList;
+export default RenderList;

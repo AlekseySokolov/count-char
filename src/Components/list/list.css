@@ -1,14 +1,25 @@
 .charactersList {
-    width: 1300px;
+    width: 1200px;
     height: 1700px;
     display: flex;
     flex-flow: column wrap;
-    justify-content: stretch;
-    list-style: square;
+    align-items: center;
 }
-.charactersList > li {
+
+.list {
+    width: 500px;
+    height: 2500px;
+    margin: 0;
+    padding: 0;
+    list-style: square;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: stretch;
+}
+.list > li {
     margin: 0px;
-    padding: 10px;
+    padding: 15px;
     font-family: Verdana;
     font-size: 14px;
 }
