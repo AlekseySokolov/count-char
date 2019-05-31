@@ -7,10 +7,14 @@ import './list.css'
 
 const List = ({list, html, getList, asc, desc}) => {
     return (
-        <div>
+        <>
+         <div className='btnContainer'>
             {buttons(getList, asc, desc, html, list)}
+         </div>
+         <div className='charactersList'>
             {renderList(list)}
-        </div>
+         </div>
+        </>
     )
 }
 

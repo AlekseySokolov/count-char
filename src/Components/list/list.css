@@ -7,8 +7,14 @@
     list-style: square;
 }
 .charactersList > li {
-    margin: 5px;
-    padding: 5px;
+    margin: 0px;
+    padding: 10px;
     font-family: Verdana;
     font-size: 14px;
+}
+.btnContainer {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
 }

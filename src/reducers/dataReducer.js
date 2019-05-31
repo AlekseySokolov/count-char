@@ -1,4 +1,4 @@
-import filterHTML from '../secondaryFunctions/filterHTML';
+import filterHTML from '../secondaryFunctions/conversionFunctions/filterHTML';
 
 const dataReducer = (state = '', action) => {
     switch (action.type) {
