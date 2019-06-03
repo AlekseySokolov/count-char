@@ -1,13 +1,5 @@
-.charactersList {
-    width: 1200px;
-    height: 1700px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
-
 .list {
-    width: 500px;
+    width: 1000px;
     height: 2500px;
     margin: 0;
     padding: 0;
@@ -15,17 +7,21 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: stretch;
+    justify-content: flex-start;
 }
 .list > li {
     margin: 0px;
-    padding: 15px;
+    padding: 10px;
     font-family: Verdana;
-    font-size: 14px;
+    font-size: 12px;
+    align-self: flex-start;
 }
 .btnContainer {
     display: flex;
     height: 50px;
     justify-content: center;
     align-items: center;
+}
+.percent {
+    font-weight: bold;
 }

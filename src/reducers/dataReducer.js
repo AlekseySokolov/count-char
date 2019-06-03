@@ -7,6 +7,6 @@ const dataReducer = (state = '', action) => {
         default :
             return state
     }
-}
+};
 
 export default dataReducer;

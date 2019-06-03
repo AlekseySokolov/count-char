@@ -13,6 +13,6 @@ const listReducer = (state = [], action) => {
         default :
             return state
     }
-}
+};
 
 export default listReducer;

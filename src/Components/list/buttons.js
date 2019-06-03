@@ -6,5 +6,5 @@ const buttons = (getList, asc, desc, html, list) => {
         <button className='btn' onClick={() => getList(html) && desc(list)}>Desc</button>
         </>
     )
-}
+};
 export default buttons;

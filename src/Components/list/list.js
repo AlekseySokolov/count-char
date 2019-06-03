@@ -3,29 +3,28 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions/actions';
 import buttons from './buttons';
 import RenderList from './renderList';
-import displayFuncCountChar from './displayFunctions/displayFuncCountChar';
-import anotherDisplayFunc from './displayFunctions/anotherDisplayFucn';
+import displayFunc from './displayFunctions/displayFunc';
 import './list.css'
 
 
-const List = ({list, html, getList, asc, desc}) => {
+const List = (props) => {
+    const {list, html, getList, asc, desc} = props
     return (
         <>
          <div className='btnContainer'>
             {buttons(getList, asc, desc, html, list)}
          </div>
          <div className='charactersList'>
-             <RenderList list={list} displayFunction={displayFuncCountChar}/>
-             <RenderList list={list} displayFunction={anotherDisplayFunc}/>
+             <RenderList list={list} displayFunction={displayFunc}/>
          </div>
         </>
     )
-}
+};
 
 const mapStateToProps = (state) => {
     return {
         html : state.html,
         list : state.list
     }
-}
-export default connect(mapStateToProps, actions)(List)
+};
+export default connect(mapStateToProps, actions)(List);
