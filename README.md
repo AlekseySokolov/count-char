@@ -7,6 +7,5 @@
 -Управление состоянием [Redux](https://github.com/reduxjs/redux)<br/>
 -Форма ввода url [Redux-form](https://github.com/erikras/redux-form)<br/>
 -запрос [axios](https://github.com/axios/axios)<br/>
--верстка [Flex-box](https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox)</br>
 <br />
 [Demo in CodeSandBox](https://codesandbox.io/s/countchar-gdei0)
