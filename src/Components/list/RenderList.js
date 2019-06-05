@@ -7,7 +7,7 @@ const RenderList = () => {
             return (
             <div className='charactersList'>
             <ul className='list'>
-            { list.map((obj, index) =><li key={index}><View {...this.props} obj={obj} /></li>) }
+            {list.map((obj, index) =><li key={index}><View {...this.props} obj={obj} /></li>)}
              </ul>
             </div>
             )
