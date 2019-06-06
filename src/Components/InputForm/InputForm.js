@@ -2,10 +2,10 @@ import React from 'react';
 import { Field, reduxForm} from 'redux-form';
 import { connect } from 'react-redux';
 import axiosRequest from './axiosRequest';
-import  * as actions from '../../actions/actions';
+import {getRequest, getList, resetSort} from '../../actions/actions';
 
 const InputForm = (props) => {
-    const { handleSubmit , getRequest, getList} = props
+    const {handleSubmit, getRequest, getList, resetSort} = props
     const submit = (value) => {
         axiosRequest(value['inputURL'], getRequest, getList)
     }
@@ -17,23 +17,28 @@ const InputForm = (props) => {
             type ='text'
             label = 'url'
             ></Field>
-            <button type='submit'>getRequest</button>
+            <button type='submit' onClick={() => resetSort()}>getRequest</button>
         </form>
     )
-}
+};
 
 const mapStateToProps = (state) => {
     return {
         html : state.html,
         list : state.list
     }
-}
+};
+const mapDispatchToProps = {
+    getRequest,
+    getList,
+    resetSort
+};
 
 const toConnect = connect(
     mapStateToProps,
-    actions
+    mapDispatchToProps
 )(InputForm);
 
 export default reduxForm({
     form : 'inputURL'
-})(toConnect)
+})(toConnect);

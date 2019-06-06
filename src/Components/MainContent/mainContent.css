@@ -1,3 +1,8 @@
+.sortContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px;
+}
 .list {
     width: 1000px;
     height: 2500px;
@@ -9,6 +14,11 @@
     align-items: center;
     justify-content: flex-start;
 }
+.sortingAlert {
+    color: #4781d1;
+    font-size: 14px;
+    font-family: Verdana;
+}
 .list > li {
     margin: 0px;
     padding: 10px;
@@ -16,7 +26,7 @@
     font-size: 12px;
     align-self: flex-start;
 }
-.btnContainer {
+.sortBtnContainer {
     display: flex;
     height: 50px;
     justify-content: center;
