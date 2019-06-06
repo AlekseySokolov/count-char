@@ -1,17 +1,20 @@
 import filterHTML from './filterHTML';
-import addToColl from './addToColl';
-import calculateTotal from '../calculateFunctions/calculateTotal';
-
 
 const toColl = (html) => {
+    const map = new Map();
     const symbols = filterHTML(html).split('');
-    const countingValues = symbols.reduce((acc, symbol) => {
-        acc[symbol] === undefined ? acc[symbol] = 1 : acc[symbol] += 1;
-        return acc;
-    }, {});
-    const totalAmount = calculateTotal(countingValues);
 
-    return addToColl(countingValues, totalAmount);
-};
+    symbols.forEach(value => map.has(value) ?
+    map.get(value).count += 1 :
+    map.set(value, {char: value, count: 1}));
+
+    const coll = [...map.values()];
+    const totalAmount = coll.reduce((acc, obj) => acc + obj.count, 0);
+
+    coll.forEach(obj =>
+        obj.percentOfTotal = (obj.count / totalAmount * 100).toFixed(3));
+
+    return coll;
+}
 
 export default toColl;
