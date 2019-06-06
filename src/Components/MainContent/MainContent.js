@@ -6,11 +6,11 @@ import './mainContent.css';
 
 
 const MainContent = (props) => {
-    const {html, list, totalAmount, sortStatus} = props
+    const {html, list, sortStatus} = props
     return (
         <>
             <Sort html={html} list={list} sortStatus={sortStatus} />
-            <List list={list} totalAmount={totalAmount} />
+            <List list={list} />
         </>
     )
 };
@@ -19,7 +19,6 @@ const mapStateToProps = (state) => {
     return {
         html: state.html,
         list : state.list,
-        totalAmount : state.totalAmount,
         sortStatus : state.sortStatus
     }
 };

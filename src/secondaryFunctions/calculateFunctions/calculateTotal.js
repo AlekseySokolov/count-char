@@ -1,9 +1,5 @@
-import toColl from '../conversionFunctions/toColl';
-
 const calculateTotal = (obj) => {
-    return toColl(obj).reduce((acc ,obj) =>
-        acc.concat(Object.values(obj)) ,[])
-        .reduce((a, b) => a + b, 0)
+    return Object.values(obj).reduce((acc , value) => acc + value, 0)
 }
 
 export default calculateTotal;

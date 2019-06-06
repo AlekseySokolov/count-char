@@ -1,5 +1,6 @@
 import filterHTML from './filterHTML';
 import addToColl from './addToColl';
+import calculateTotal from '../calculateFunctions/calculateTotal';
 
 
 const toColl = (html) => {
@@ -8,7 +9,9 @@ const toColl = (html) => {
         acc[symbol] === undefined ? acc[symbol] = 1 : acc[symbol] += 1;
         return acc;
     }, {});
-    return addToColl(countingValues);
+    const totalAmount = calculateTotal(countingValues);
+
+    return addToColl(countingValues, totalAmount);
 };
 
 export default toColl;
